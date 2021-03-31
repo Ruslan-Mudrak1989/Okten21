@@ -53,29 +53,82 @@ console.log(greet,company,firstNum,float);
 
 // - За допомогою prompt() отримати 3 числа. Привести їх до числа (Google "String to number JS"). Вивести їх в консоль.
 
-let firstNumb = +prompt('First number');
-let secondNum = +prompt('Second number');
-let thirdNum = +prompt('Third number');
-
-console.log(firstNumb,secondNum,thirdNum);
+// let firstNumb = +prompt('First number');
+// let secondNum = +prompt('Second number');
+// let thirdNum = +prompt('Third number');
+//
+// console.log(firstNumb,secondNum,thirdNum);
 
 
 // - За допомогою prompt() отримати 4 числа. Привести їх до числа за допомогою paeseInt. Додати їх всі мож собою і результат вивести в консоль.
+
+// let one = parseInt(prompt('one'));
+// let two = parseInt(prompt('two'));
+// let three = parseInt(prompt('three'));
+// let four = parseInt(prompt('four'));
+//
+//
+// let sum = one + two + three + four;
+//
+// console.log(sum);
 
 
 
 // - За допомогою prompt() отримати 3 числа з плаваючою точкою за допомогою parseFloat.
 //     Просумувати їх. Отрманий результат записати в змінну result. Вивести цю змінну в консоль.
-// - За допомогою prompt() отримати 3 числа з плаваючою точкою. Заокруглити їх (Google "round number JS"). Просумувати їх між собою. Результат вивести в консоль.
+
+
+// let floatOne = parseFloat(prompt('one'));
+// let floatTwo = parseFloat(prompt('two'));
+// let floatThree = parseFloat(prompt('three'));
+//
+// let resilt = floatOne + floatTwo + floatThree;
+//
+// console.log(resilt);
+
+
+
+// - За допомогою prompt() отримати 3 числа з плаваючою точкою. Заокруглити їх (Google "round number JS"). Просумувати їх між собою.
+// Результат вивести в консоль.
+
+// let roundOne = Math.round(prompt('one'));
+// let roundTwo = Math.round(prompt('two'));
+// let roundThree = Math.round(prompt('three'));
+//
+// let res = roundOne + roundTwo + roundThree;
+//
+// console.log(res);
+
+
 // - За допомогою prompt() отримати 2 цілих числа.
 //     Перше число - це число яке будуть підносити до степеня. Друге число - це число яке являється степенню.
 //     За допомогою Math.pow (Google) піднести перше число в степінь другого числа.
 //     Example. Число 1 = 5. Число 2 = 2. Результат = 25
+
+// let powOne = parseInt(prompt('one'));
+// let powTwo = parseInt(prompt('two'));
+//
+// let resPow = Math.pow(powOne,powTwo);
+//
+// console.log(resPow);
+
+
+
 //     - За допомогою оператора typeof визначити типи наступних змінних та вивести їх в консоль.
 //     let a = 100; let b = '100'; let c = true;
+
+let a = 100;
+let b = '100';
+let c = true;
+
+console.log(typeof a);
+console.log(typeof b);
+console.log(typeof c);
+
+
 // - Поставет відповідний оператор в виразах що б вийшов відповідний результат.
 //     В однакових виразаї не використовувати однакові оператори!!!
-//     5 ? 6 -> true
+// 5 ? 6 -> true
 // 5 ? 6 -> false
 // 5 ? 6 -> false
 // 5 ? 6 -> false
@@ -86,35 +139,59 @@ console.log(firstNumb,secondNum,thirdNum);
 // 10 ? 10 -> false
 // 123 ? '123' -> false
 // 123 ? '123' -> true
-//
+
+// console.log(5 < 6);
+// console.log(5 > 6);
+// console.log(5 >= 6);
+// console.log(5 == 6);
+// console.log(10 == 10);
+// console.log(10 === 10);
+// console.log(10 != 10);
+// console.log(10 !== 10);
+// console.log(10 < 10);
+// console.log(123 === '123');
+// console.log(123 == '123');
+
+
 // Додатково:
 //     - Подивіться на наступні вирази і спробуйте вгадати яким буде вивід в консоль. Перевірте себе.
-// console.log(132 > 100 && 45 < 12 );
-// console.log(34 > 33 && 23 < 90 );
-// console.log(99 > 100 && 45 > 12 );
-// console.log(132 > 100 || 45 < 12 );
-// console.log(111 > 11 || 45 < 111 );
-// console.log((111 > 11 || 45 < 111) && (132 > 100 || 45 < 12) );
-// console.log((111 > 11 || 45 < 56) || (132 > 100 || 45 < 12) );
-// console.log((132 > 100 && 45 < 12 ) && (132 > 100 || 45 < 12 ) );
-// console.log((111 > 11 || 45 < 111) || (99 > 100 && 45 > 12 ));
-// console.log(!!'-1');
-// console.log(!!-1);
-// console.log(!!'0');
-// console.log(!!'null');
-// console.log(!!'undefined');
-// console.log(!!(3/'owu'));
-// console.log((111 > 11 || 45 < 111) ||  !!'0');
-// console.log((!!111 == !!11 || 45 < 111) && (99 > 100 && 45 > 12 ));
+// console.log(132 > 100 && 45 < 12 ); // false
+// console.log(34 > 33 && 23 < 90 ); // true
+// console.log(99 > 100 && 45 > 12 ); // false
+// console.log(132 > 100 || 45 < 12 );// true
+// console.log(111 > 11 || 45 < 111 );// true
+// console.log((111 > 11 || 45 < 111) && (132 > 100 || 45 < 12) );// true
+// console.log((111 > 11 || 45 < 56) || (132 > 100 || 45 < 12) );// true
+// console.log((132 > 100 && 45 < 12 ) && (132 > 100 || 45 < 12 ) );// false
+// console.log((111 > 11 || 45 < 111) || (99 > 100 && 45 > 12 ));// true
+// console.log(!!'-1');// true
+// console.log(!!-1); // true
+// console.log(!!'0');// true
+// console.log(!!'null'); // true
+// console.log(!!'undefined');// true
+// console.log(!!(3/'owu'));// false
+// console.log((111 > 11 || 45 < 111) ||  !!'0'); // true
+// console.log((!!111 == !!11 || 45 < 111) && (99 > 100 && 45 > 12 )); // false
 //
-//
+
 // ______________________________________________________________________________________________________________________________________________________
 // РОБОТА В АУДИТОРІЇ
 // ______________________________________________________________________________________________________________________________________________________
 //
 // 1. Оголосіть змінні str, num, flag и txt зі значеннями «Привіт», 123, true, «true».
+
+let str = 'Hello';
+let num = 123;
+let flag = true;
+let txt = 'true';
+
 // За допомогою typeof переконайтесь, що значення змінних належать типам: string, number и  boolean.
-//
+
+console.log(typeof str);
+console.log(typeof num);
+console.log(typeof flag);
+console.log(typeof txt);
+
 // 2. Оголосіть змінні a1, a2, a3, a4, a5. За домогою 3х математичних оператцій отримайте числа:
 //     34,
 //         12,
@@ -123,55 +200,138 @@ console.log(firstNumb,secondNum,thirdNum);
 //         87
 // Старайтесь використовувати різні оператори.
 //     Example: 88 = (16 / 2) * 11
-//
+
+
+let a1,a2,a3,a4,a5;
+
+a1 = (8 + 9) * 2;
+a2 = (1 * 3)*(2 * 2);
+a3 = (99 / 3)+ 33;
+a4 = (10 * 6)+(15 * 2);
+a5 = (60 + 20)+(3 + 4);
+
+console.log(a1,a2,a3,a4,a5);
+
+
+
 // 3.  Створіть змінні a6, a7, a8, a9, a10. Запишіть в них результати виразів:
 //     5 % 3,
 //     3 % 5,
 //     5 + '3',
 //     '5' - 3,
 //     75 + 'кг'
-//
-// 4. Напищіть код, який вираховує площу прямокутника висотою 23см. (змінна height) та шириною 10см (змінна width).
+
+let a6 = 5 % 3;
+let a7 =  3 % 5;
+let a8 =  5 + '3';
+let a9 =  '5' - 3;
+let a10 =  75 + 'кг';
+
+console.log(a6, a7, a8, a9, a10);
+
+
+
+// 4. Напишіть код, який вираховує площу прямокутника висотою 23см. (змінна height) та шириною 10см (змінна width).
 // Значееня площі зберігати в змінній s.
+
+// let height = +prompt('height');
+// let width = +prompt('width');
 //
+// let s = height * width;
+//
+// console.log(s);
+
+
 // 5.  Напиши код, который находит объем цилиндра высотой 10м (переменная heightC) и диаметром основания 4м (dC),
 //     результат поместите в переменную v.
+
+// let heightC = +prompt('height C');
+// let d = +prompt('d');
 //
+// let v = pi *d * heightC;
+// console.log(v);
+
+
 // 6. У прямоугольного треугольника две стороны n (со значением 3) и m (со значением 4).
 // Найдите гипотенузу k по теореме Пифагора (нужно использовать функцию Math.pow(число, степень) или оператор возведения в степень ** ).
+
+// let n = +prompt('n');
+// let m = +prompt('m');
 //
+// let hip = Math.pow(n,2) + Math.pow(m,2);
+//
+// console.log(hip);
+
+
 // 7. Напишите скрипт, который выводит "Hello world", создавши переменную str и выводить спомощью document.write, alert и console.log
 //
 // 8. Вывести в окно браузера при помощи метода alert() следующие данные: Ваше ФИО, возраст, хобби (каждой на новой строки спомощью \n).
+
+// let name1 = 'Ruslan';
+// let surname1 = 'Mudrak';
+// let age1 = 31;
+// let hobby = 'sport';
+//
+// alert( name1 + '\n' + surname1 + '\n' + age1 + '\n' + hobby);
+
+
+
 //
 // 9. Создать 4 переменные с использованием ключевого слова let с именами str1, str2, str3, concatenation.
 //     Переменной str1 присвоить фразу ‘Кто ‘, str2 – ‘ты ‘, str3 – ‘такой?’
 //   Локальной переменной concatenation присвоить результат конкатенации 3-х строк: str1, str2, str3.
 //     Вывести в документ содержимое переменной concatenation спомощью document.write
+
+// let str1 = 'Who';
+// let str2 = 'are';
+// let str3 = 'you';
 //
+// let concatenation = str1 + ' ' + str2 +' ' + str3;
+//
+// document.write(concatenation);
+
+
+
+
 // 10. Какие значения выведет в окно браузера следующий фрагмент кода?  и почему?
-//     let str = "20";
-// let a = 5;
-// document.write(str + a + "<br/>");
-// document.write(str - a + "<br/>");
-// document.write(str * "2" + "<br/>");
-// document.write(str / 2 + "<br/>");
+// let str12 = "20";
+// let a12 = 5;
+// document.write(str12 + a12 + "<br/>");
+// document.write(str12 - a12 + "<br/>");
+// document.write(str12 * "2" + "<br/>");
+// document.write(str12 / 2 + "<br/>");
 // 11. Какие значения выведет в окно консоли следующий фрагмент кода если его поместить в console.log?
-//     parseInt("3.14")
-//     parseInt("-7.875")
-// parseInt("435")
-// parseInt("Вася")
+// console.log(parseInt("3.14"));
+// console.log(parseInt("-7.875"));
+// console.log(parseInt("435"));
+// console.log(parseInt("Вася"));
 //
-// 12.  С помощью окна ввода, вызываемого методом prompt, пользователь может ввести данные, которые будут использоваться далее, повторите код ниже
-// let str = prompt("Enter something", "ho-ho")
-// console.log(str);
+// 12.  С помощью окна ввода, вызываемого методом prompt, пользователь может ввести данные, которые будут использоваться далее,
+// повторите код ниже
+// let str13 = prompt("Enter something", "ho-ho")
+// console.log(str13);
 //
 // 13. С помощью окна ввода, вызываемого методом prompt, сделать сложение двух чисел, а вывод результата при помощи метода alert
-// 14. С помощью окна ввода, вызываемого методом prompt, пользователь последовательно выводит имя, фамилию и возраст, а вам не обходимо вывести строку такого вида
+
+// let num13 = +prompt('number 1');
+// let num14 = +prompt('number 2');
+//
+// alert(num13 + num14);
+
+
+
+
+// 14. С помощью окна ввода, вызываемого методом prompt, пользователь последовательно выводит имя, фамилию и возраст,
+// а вам не обходимо вывести строку такого вида
 // Доброго вечера Иван Иванов, мои поздравления что вам 32 , а вывод результата при помощи метода alert
+
+// let myName1 = prompt('What is your name?');
+// let mySur1 = prompt('What is your surname?');
+// let myAge1 = +prompt('How old are you?');
 //
-//
-//
+// alert(`Hello mr ${myName1} ${mySur1}, congratulate that you've got ${myAge1}!`);
+
+
 // =====================
 // ======ДОП============
 // =====================
@@ -181,6 +341,26 @@ console.log(firstNumb,secondNum,thirdNum);
 //
 // 1. Три різних числа вводяться через prompt().
 //     За допомоги if else вивести іх в порядку зростання. (відсортувати по зростанню)
+
+let num31 = prompt('num 1');  //5 //3 //4
+let num32 = prompt('num 2');  //4 //4 //3
+let num33 = prompt('num 3');  //3 //5 //5
+
+if (num31 > num32 && num31 > num33){
+    if (num32 > num33){
+        console.log(num33,num32,num31);
+    } else {
+        console.log(num32,num33,num31);
+    }
+} else if (num33 > num32 && num33 > num31){
+    if (num32 > num31){
+        console.log(num31,num32,num33);
+    } else {
+        console.log(num32,num31,num33);
+    }
+}
+
+
 //
 // 2.
 // Все параматры получаем с клавиатуры!!!!
@@ -205,27 +385,3 @@ console.log(firstNumb,secondNum,thirdNum);
 
 
 
-
-// - при помощи 3х разных prompt() получить 3 слова которые являются вашими ФИО.
-// Для фамилии имени и отчества создать разные переменные. Вывести каждую при помощи console.log , alert, document.write
-
-
-// let name = prompt('name');
-// let surname = prompt('surname');
-// let middle = prompt('middleName');
-
-// console.log(`${name} ${surname} ${middle}`);
-// document.write(  '<br>'+ name + ' ' + surname + ' ' + middle );
-
-
-// - Взять переменные из задания 4 и сконкатенировать их в одной переменной person.
-
-// let person = name +' '+ surname + ' ' + middle;
-// console.log(person);
-
-// при помощи prompt() получить 3 числа. Привести их к числовому типу при помощи +. вывести их в консоль.
-
-// let number = +prompt();
-// let number1 = +prompt();
-// let number2 = +prompt();
-// console.log(number,number1,number2);
