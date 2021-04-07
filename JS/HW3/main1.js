@@ -112,7 +112,6 @@ let users = [{
 for (let i = 0; i < users.length; i++) {
     const usersBlocks = document.createElement('div');
     const usersAddress = document.createElement('div');
-    const usersHr = document.createElement('hr');
     const button = document.createElement('button');
 
     usersBlocks.style.backgroundColor = 'lightgreen';
@@ -123,10 +122,9 @@ for (let i = 0; i < users.length; i++) {
 
 
 
-    usersBlocks.innerText = `Name: ${users[i].name}; Age: ${users[i].age}; Status: ${users[i].status};`;
-    usersBlocks.appendChild(usersHr);
+    usersBlocks.innerHTML = `Name: ${users[i].name}; Age: ${users[i].age}; Status: ${users[i].status};<hr>`;
     usersBlocks.appendChild(usersAddress);
-    usersAddress.innerText = `City: ${users[i].address.city}; Country: ${users[i].address.country}; Street: ${users[i].address.street}; House Number: ${users[i].address.houseNumber};`;
+    usersAddress.innerHTML = `City: ${users[i].address.city}; Country: ${users[i].address.country}; Street: ${users[i].address.street}; House Number: ${users[i].address.houseNumber};<hr>`;
     document.body.appendChild(usersBlocks);
     usersBlocks.appendChild(button);
 }
