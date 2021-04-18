@@ -34,7 +34,7 @@ for (let i = 0; i < 10; i++) {
 
 for (let i = 0; i < 10; i++) {
     // document.write('<div>'+(i + 1)+'. Hello guys<div>')
-    document.write(`<div>${i + 1}. Hello guys<div>`)
+    document.write(`<div>${i + 1}. Hello guys<div>`);
     console.log('Hello guys');
 }
 
@@ -163,35 +163,36 @@ for (let j = 1; j < 100; j += 2) {
 
 // - Відтворити роботу годинника,
 // відрахувавши 2 хвилини (2 цикли! 1й - хвилини, 2й - секунди)
-
-// const step = 60;
-// let min = 0;
-// let sec = 0;
-// let hour = 0;
 //
-// for (let j = 1; j < step && min < 2 /*min !== 2*/; j++) {
-//     for (let k = 1; k < step; k++) {
-//         sec++;
-//         console.log('Second:', sec);
-//     }
-//     sec = 0;
-//     min++;
-//     console.log('Minute:', min);
-// }
-// console.log(min + ':' + sec);
+const step = 60;
+let min = 0;
+let sec = 0;
+let hour = 0;
+//
+for (let j = 1; j < step && min < 2 /*min !== 2*/; j++) {
+    for (let k = 1; k < step; k++) {
+        sec++;
+        console.log('Second:', sec);
+    }
+    sec = 0;
+    min++;
+    console.log('Minute:', min);
+}
+console.log('Time:'+ min + ':' + sec);
+
 
 
 // - Відтворити роботу годинника, відрахувавши
 // 2 години 20 хвилини (3 цикли! 1й - години, 2й - хвилини, 3й - секунди)
 
-// let min1 = 0;
-// let sec1 = 0;
-// let hour1 = 0;
-//
+let min1 = 0;
+let sec1 = 0;
+let hour1 = 0;
+
 // for (hour1 = 0; hour1 < step && hour1 <= 2; hour1++) {
-//     console.log('Hour:', hour1);
+//     // console.log('Hour:', hour1);
 //     for (min1 = 1; min1 < step; min1++) {
-//         console.log('Minutes:', min1);
+//         // console.log('Minutes:', min1);
 //         if (hour1 === 2 && min1 === 20) {
 //             break;
 //         }
@@ -382,7 +383,7 @@ console.log(even);
 
 let lotteryNumbers = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18];
 
-let j = 0;
+let j = 1;
 
 // while (j < lotteryNumbers.length) {
 //     console.log(lotteryNumbers[j]);
@@ -393,19 +394,15 @@ let j = 0;
 //     3. перебрати циклом while та вивести  числа тільки з непарним індексом
 
 while (j < lotteryNumbers.length) {
-    if (lotteryNumbers[j] % 2 !== 0) {
         console.log(lotteryNumbers[j]);
-    }
-    j++;
+    j+=2;
 }
 
 
 // 4. перебрати циклом for та вивести  числа тільки з непарним індексом
 
-for (let k = 0; k < lotteryNumbers.length; k++) {
-    if (lotteryNumbers[k] % 2 !== 0) {
+for (let k = 1; k < lotteryNumbers.length; k+=2) {
         console.log(lotteryNumbers[k]);
-    }
 }
 
 
@@ -503,13 +500,13 @@ console.log(newAnotherArr);
 arrExample = [1, 24, 3, 51, 7, 19, 56, 8, 67]; // 1,19,56
 console.log(arrExample);
 
-for (let i = 0; i < arrExample.length; i++) {
-    for (let k = i + 1; i < k; k--) {
-        if (arrExample[k] % 2 === 0) {
-            console.log(arrExample[i]);
-        }
-    }
-}
+// for (let i = 0; i < arrExample.length; i++) {
+//     for (let k = i + 1; i < k; k--) {
+//         if (arrExample[k] % 2 === 0) {
+//             console.log(arrExample[i]);
+//         }
+//     }
+// }
 
 
 // 6. Є масив з числами [100,250,50,168,120,345,188], Які характеризують вартість окремої покупки. Обрахувати середній чек.
