@@ -110,23 +110,24 @@ let users = [{
 
 
 for (let i = 0; i < users.length; i++) {
-    const usersBlocks = document.createElement('div');
-    const usersAddress = document.createElement('div');
+    const userBlocks = document.createElement('div');
+    const userAddress = document.createElement('div');
     const button = document.createElement('button');
 
-    usersBlocks.style.backgroundColor = 'lightgreen';
-    usersBlocks.style.margin = '20px';
-    usersBlocks.style.width = '500px';
+    userBlocks.style.backgroundColor = 'lightgreen';
+    userBlocks.style.margin = '20px';
+    userBlocks.style.padding = '10px';
+    userBlocks.style.width = '500px';
     button.innerText = 'Add friend';
     button.style.margin = '5px';
 
 
-
-    usersBlocks.innerHTML = `Name: ${users[i].name}; Age: ${users[i].age}; Status: ${users[i].status};<hr>`;
-    usersBlocks.appendChild(usersAddress);
-    usersAddress.innerHTML = `City: ${users[i].address.city}; Country: ${users[i].address.country}; Street: ${users[i].address.street}; House Number: ${users[i].address.houseNumber};<hr>`;
-    document.body.appendChild(usersBlocks);
-    usersBlocks.appendChild(button);
+    userBlocks.innerHTML = `Name: ${users[i].name}; Age: ${users[i].age}; Status: ${users[i].status};<hr>`;
+    userBlocks.appendChild(userAddress);
+    const address = `Street: ${users[i].address.street}; House Number: ${users[i].address.houseNumber}<hr>`;
+    userAddress.innerHTML = `City: ${users[i].address.city};Country: ${users[i].address.country} ${address}`;
+    document.body.appendChild(userBlocks);
+    userBlocks.appendChild(button);
 }
 
 

@@ -168,14 +168,14 @@ const step = 60;
 let min = 0;
 let sec = 0;
 let hour = 0;
-//
-for (let j = 1; j < step && min < 2 /*min !== 2*/; j++) {
+
+for (min = 1; min < step && min < 2 /*min !== 2*/; min++) {
     for (let k = 1; k < step; k++) {
         sec++;
         console.log('Second:', sec);
     }
     sec = 0;
-    min++;
+    // min++;
     console.log('Minute:', min);
 }
 console.log('Time:'+ min + ':' + sec);

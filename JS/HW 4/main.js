@@ -7,7 +7,7 @@ arrayFunc(arr1);
 // 2) створити функцію яка заповнює масив рандомними числами та виводить його. Для виведення використати попередню функцію.
 
 let randomFuncArr = (min, max, length) => {
-    array = [];
+    const array = [];
     for (let i = 0; i < length; i++) {
         array.push(Math.floor(Math.random() * max) + min);
     }
@@ -58,7 +58,7 @@ arrayFunc(max);
 // 5) створити функцію яка повертає найбільше число з масиву
 
 let maxArrNum = (arr) => {
-    let maxNumInArr = 0;
+    let maxNumInArr = arr[0];
     for (const elem of arr) {
         if (maxNumInArr < elem) {
             maxNumInArr = elem;
@@ -105,9 +105,10 @@ arrayFunc(sum);
 let arithm = (arr) => {
     let count = 0;
     for (const elem of arr) {
-        count += elem / arr.length;
+        count += elem;
     }
-    return count
+    const avarage = count/ arr.length;
+    return avarage
 };
 
 
@@ -153,6 +154,7 @@ console.log(students);
 //     for (const obj of arr) {
 //         for (const key in obj) {
 //             arrKey.push(key);
+                /*Object.keys()*/
 //         }
 //     }
 //
@@ -172,6 +174,7 @@ console.log(students);
 //     for (let i = 0; i < arr.length; i++) {
 //         for (const value in arr[i]) {
 //             arrValue.push(arr[i][value])
+                    /*Object.values()*/
 //         }
 //     }
 //     return arrValue
@@ -207,21 +210,13 @@ const anotherArray = [4, 23, 5, 56, 7, '7', 21, true, 2, 9];
 
 let sumValues = (arr1, arr2) => {
     const result = [];
-    // for (let i = 0; i < arr1.length; i++) {
-    //     for (let j = 0; j < arr2.length; j++) {
-    //         if ((arr1.indexOf(arr1[i])) === (arr2.indexOf(arr2[j]))) {
-    //             result.push(arr1[i] + arr2[j])
-    //         }
-    //     }
-    // }
-
-    for (const index1 in arr1) {
-        for (const index2 in arr2) {
-            if (index1 === index2) {
-                result.push(arr1[index1] + arr2[index2]);
-            }
-        }
+    for (let i = 0; i < arr1.length; i++) {
+                result.push(arr1[i] + arr2[i])
     }
+
+    // for (const index1 in arr1) {
+    //             result.push(arr1[index1] + arr2[index1]);
+    // }
     return result
 };
 
