@@ -61,7 +61,7 @@ console.log(total);
 
 
 
-
+// Task_2
 
 // 2) Створити масив з 20 стрічок та:
 
@@ -122,7 +122,7 @@ console.log(strMoreThanFour);
 // str.forEach((value, i, array) => array[i] = `Sam says: ${value}`);
 // console.log(str);
 
-
+// Task_3
 // 3) Все робити тільки за допомогою методів масивів!
 
 
