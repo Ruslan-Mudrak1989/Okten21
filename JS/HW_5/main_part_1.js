@@ -34,15 +34,16 @@
 
 class Computer {
     constructor(ram, power, name) {
+        if (power > 1000) {
+            power = 1000
+        }
+        if (power < 1) {
+            power = 1;
+        }
         this.ram = ram;
         this.power = power;
         this.name = name;
-        if (this.power > 1000) {
-            this.power = 1000
-        }
-        if (this.power < 1) {
-            this.power = 1;
-        }
+
     }
 
 
@@ -134,10 +135,10 @@ const ultraMac = new UltraLapTop(16, 800, 'Mac', 14, 3);
 const newGamePC = new GamePC(8,250,'Acer');
 
 
-console.log(sumsung);
-console.log(lenovo);
 sumsung.commutator(true);
 sumsung.commutator();
+console.log(sumsung);
+console.log(lenovo);
 
 
 console.log(asus);
