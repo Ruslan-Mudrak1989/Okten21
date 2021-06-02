@@ -179,13 +179,17 @@ new Cinderella('Valeria',26,25)
 ];
 
 
-for (const cinderella of cinderellas) {
-    if (cinderella.footSize === prince.shoe){
-        console.log(cinderella);
-    }
-}
+// for (const cinderella of cinderellas) {
+//     if (cinderella.footSize === prince.shoe){
+//         console.log(cinderella);
+//     }
+// }
 
 
+// Alternative
+
+let rightCinderellas = cinderellas.find(cinderella => cinderella.footSize === prince.shoe );
+console.log(rightCinderellas);
 
 
 
