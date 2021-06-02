@@ -1,0 +1,8 @@
+#wrapped {
+    margin: 10px;
+}
+.sct-task {
+    background-color: limegreen;
+    padding: 5px;
+    border:  1px solid saddlebrown;
+}

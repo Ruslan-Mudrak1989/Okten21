@@ -1,4 +1,5 @@
 // Створити обєкт імен з їхніми айді
+//
 
 const names = ['Igor', 'Solomia', 'Ruslan', 'Natalia'];
 
