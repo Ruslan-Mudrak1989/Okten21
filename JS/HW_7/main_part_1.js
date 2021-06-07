@@ -12,7 +12,6 @@ btn.onclick = () => {
 };
 
 
-
 // Alternative
 
 // btn.onclick = () => {
@@ -30,7 +29,7 @@ console.log(btn);
 const hiddenBtn = document.querySelector('.btn-2');
 
 hiddenBtn.onclick = () => {
-  hiddenBtn.hidden = true;
+    hiddenBtn.hidden = true;
 };
 
 
@@ -43,9 +42,9 @@ const outInfo = document.querySelector('.out-info');
 
 
 confirm.onclick = () => {
-  age.value < 18?
-     outInfo.innerText = 'Sorry, You are too young!':
-      outInfo.innerText = 'Welcome to the website!'
+    age.value < 18 ?
+        outInfo.innerText = 'Sorry, You are too young!' :
+        outInfo.innerText = 'Welcome to the website!'
 };
 
 console.log(age);
@@ -60,9 +59,9 @@ const content = document.querySelector('.dropdown-content');
 content.hidden = true;
 
 menu.onclick = () => {
-  // content.hidden === false ?
-  //  content.hidden = true:
-  //  content.hidden = false
+    // content.hidden === false ?
+    //  content.hidden = true:
+    //  content.hidden = false
 
     // Alternative
     content.hidden = !content.hidden;
@@ -81,31 +80,58 @@ content.onmouseout = (ev) => {
 // HOW TO PUT THEM TOGETHER IN ONE FUNCTION
 
 
-
 // - Створіть список коментарів , приклад об'єкту коментаря - {title : 'lorem', body:'lorem ipsum dolo sit ameti'}.
 // Вивести список коментарів в документ, кожний в своєму блоці.
 //     Додайте кожному коментарю по кнопці для згортання його body.
 
 const forum = [
-    {id: 1,},
-    {name: 'Igor',},
-    {email: 'igor12@gmail.com',},
-    {title: 'Problem',},
-    {comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ' +
-            'et dolore magna aliqua.'},
-    {id: 2,},
-    {name: 'Ivan',},
-    {email: 'ivan22@gmail.com',},
-    {title: 'Solve',},
-    {comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ' +
-            'et dolore magna aliqua.'},
-    {id: 3,},
-    {name: 'Ira',},
-    {email: 'ira35@gmail.com',},
-    {title: 'Solution',},
-    {comment:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ' +
-            'et dolore magna aliqua.'},
+    {
+        id: 1,
+        name: 'Igor',
+        email: 'igor12@gmail.com',
+        title: 'Problem',
+        comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ' +
+            'et dolore magna aliqua.'
+    },
+    {
+        id: 2,
+        name: 'Ivan',
+        email: 'ivan22@gmail.com',
+        title: 'Solve',
+        comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ' +
+            'et dolore magna aliqua.'
+    },
+    {
+        id: 3,
+        name: 'Ira',
+        email: 'ira35@gmail.com',
+        title: 'Solution',
+        comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ' +
+            'et dolore magna aliqua.'
+    },
 ];
+
+
+let section = document.querySelector('.task-5');
+let innerContent = document.querySelectorAll('.inner-content');
+let userName = document.querySelectorAll('.user-name');
+let userEmail = document.querySelectorAll('.user-email');
+let userTitle = document.querySelectorAll('.user-title');
+let userComment = document.querySelectorAll('.user-comment');
+let btnHideComment = document.querySelectorAll('.btn-5');
+
+
+console.log(userName);
+
+forum.map((user, inx) => {
+    userName[inx].innerHTML = user.name;
+    userEmail[inx].innerHTML = user.email;
+    userTitle[inx].innerHTML = user.title;
+    userComment[inx].innerHTML = user.comment;
+    btnHideComment[inx].onclick = () => {
+    userComment[inx].hidden = !userComment[inx].hidden;
+    }
+});
 
 
 // - Створити 2 форми  по 2 інпути в кожній. створити кнопку при кліку на яку зчитується та виводиться на консоль інформація з цих 2х форм.

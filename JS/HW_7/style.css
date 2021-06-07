@@ -24,7 +24,12 @@
     text-decoration: none;
 }
 
-/*.dropdown-content a:hover {*/
-/*    background-color: grey;*/
-/*    color: whitesmoke;*/
-/*}*/
+.inner-content {
+    background-color: yellowgreen;
+    padding: 10px;
+}
+.user-title, .user-comment{
+    border:  saddlebrown solid 1px;
+    background-color: whitesmoke;
+    padding: 5px;
+}
