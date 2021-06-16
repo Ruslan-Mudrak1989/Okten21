@@ -28,9 +28,9 @@
         <form action="" class="form" name="confirmAge">
             <label for="age">Age</label>
             <input type="number" id="age" name="age" min="1" max="120">
-            <button type="button" class="btn btn-primary btn-sm btn-3">Confirm</button>
             <div class="out-info">Look here!</div>
         </form>
+            <button type="button" class="btn btn-primary btn-sm btn-3">Confirm</button>
     </section>
     <h3>Task-4</h3>
     <section class="sct-task">
@@ -80,9 +80,48 @@
         </div>
 
     </section>
+<fieldset>
 
+</fieldset>
 
-    <h3>Task-1</h3>
+    <h3>Task-6</h3>
+    <section class="sct-task">
+        <p>- Створити 2 форми  по 2 інпути в кожній. створити кнопку при кліку на яку зчитується та виводиться
+            на консоль інформація з цих 2х форм.
+            Кнопка повинна лежати за межами форм (Щоб уникнути  перезавантаження сторінки)
+            Доступ до інпутів через Forms API. Отже дайте формі та інпутам всі необхідні атрибути.</p>
+        <div class="forms">
+            <form action="" id="user-data" name="user-data">
+                <fieldset form="user-data">
+                    <legend>Enter your full name</legend>
+                    <label for="first-name"><b>First Name</b></label>
+                    <input type="text"id="first-name" name="first-name">
+                    <label for="last-name"><b>Last Name</b></label>
+                    <input type="text"id="last-name" name="last-name">
+                </fieldset>
+            </form>
+            <form action="" id="location" name="location">
+                <fieldset form="location">
+                    <legend>Location</legend>
+                    <label for="country"><b>Country</b></label>
+                    <select name="country" id="country">
+                        <option disabled selected>Select the country</option>
+                    </select>
+                    <label for="city"><b>City</b></label>
+                    <select name="city" id="city">
+                        <option disabled selected>Select the city</option>
+                    </select>
+<!--                    <label for="contry"><b>Country</b></label>-->
+<!--                    <input type="text"id="country" name="country">-->
+<!--                    <label for="city"><b>City</b></label>-->
+<!--                    <input type="text"id="city" name="city">-->
+                </fieldset>
+            </form>
+        </div>
+                <div class="data"></div>
+
+            <button type="button" class="btn btn-primary btn-lg btn-6">Ok</button>
+    </section>
 </div>
 
 

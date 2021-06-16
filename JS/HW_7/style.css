@@ -33,3 +33,20 @@
     background-color: whitesmoke;
     padding: 5px;
 }
+.forms {
+    display: flex;
+    justify-content: space-around;
+}
+fieldset {
+    background-color: #eeeeee;
+}
+
+legend {
+    background-color: gray;
+    color: white;
+}
+
+#user-data, #location{
+    padding: 20px;
+}
+

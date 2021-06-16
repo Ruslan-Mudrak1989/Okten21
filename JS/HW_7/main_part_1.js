@@ -129,7 +129,7 @@ forum.map((user, inx) => {
     userTitle[inx].innerHTML = user.title;
     userComment[inx].innerHTML = user.comment;
     btnHideComment[inx].onclick = () => {
-    userComment[inx].hidden = !userComment[inx].hidden;
+        userComment[inx].hidden = !userComment[inx].hidden;
     }
 });
 
@@ -137,6 +137,57 @@ forum.map((user, inx) => {
 // - Створити 2 форми  по 2 інпути в кожній. створити кнопку при кліку на яку зчитується та виводиться на консоль інформація з цих 2х форм.
 //     Кнопка повинна лежати за межами форм (Щоб уникнути  перезавантаження сторінки)
 // Доступ до інпутів через Forms API. Отже дайте формі та інпутам всі необхідні атрибути.
+
+const firstName = document.getElementById('first-name');
+const lastName = document.getElementById('last-name');
+const country = document.getElementById('country');
+const city = document.getElementById('city');
+const ok = document.querySelector('.btn-6');
+const data = document.querySelector('.data');
+
+const countries = [{
+    country:'Ukraine',
+    city: ['Lviv',
+        'Kyiv',
+        'Kharkiv']
+},
+    {
+        country:'Poland',
+        city:['Krakow',
+            'Warsaw',
+            'Lodz']
+    }];
+
+countries.map((value) =>{
+    const countryOption = document.createElement('option');
+    countryOption.setAttribute('value',value.country);
+    countryOption.innerText = value.country;
+    country.appendChild(countryOption);
+
+});
+
+country.onchange = () => {
+    city.innerText = '';
+    let selectedCountry = country.value;
+    for (const item of countries) {
+        if (selectedCountry === item.country){
+            item.city.forEach((item) => {
+                let cityOption = document.createElement('option');
+                cityOption.setAttribute('value',item);
+                cityOption.innerText = item;
+                city.appendChild(cityOption);
+            });
+        }
+    }
+};
+
+
+ok.onclick = () => {
+    data.innerHTML = `Hello my name is ${firstName.value}. My surname is ${lastName.value}. 
+    I'm from ${city.value},${country.value}`
+};
+
+
 // - Створити функцію, яка генерує таблицю.
 //     Перший аргумент визначає кількість строк.
 //     Другий параметр визначає кількість ячейок в кожній строці.
