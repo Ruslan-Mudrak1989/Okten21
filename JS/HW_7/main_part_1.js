@@ -158,6 +158,11 @@ const countries = [{
             'Lodz']
     }];
 
+
+
+    
+
+
 countries.map((value) =>{
     const countryOption = document.createElement('option');
     countryOption.setAttribute('value',value.country);
@@ -183,8 +188,10 @@ country.onchange = () => {
 
 
 ok.onclick = () => {
-    data.innerHTML = `Hello my name is ${firstName.value}. My surname is ${lastName.value}. 
-    I'm from ${city.value},${country.value}`
+    firstName.value === ''|| lastName.value === '' || city.value ==='' || country.value === '' || country.value === 'Select the country' ?
+        data.innerText = 'Incorrect name':
+    data.innerHTML = `Hello my name is ${firstName.value.trim()}. My surname is ${lastName.value.trim()}. 
+    I'm from ${city.value},${country.value}`;
 };
 
 
