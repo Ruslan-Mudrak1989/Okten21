@@ -46,3 +46,5 @@ function meeting(arr, workingDay, currentTime, dayOfTheWeek) {
 
 const gt = meeting(workingDays, wD, time, day);
 console.log(gt);
+
+
