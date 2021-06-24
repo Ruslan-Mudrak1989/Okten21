@@ -146,26 +146,59 @@ const ok = document.querySelector('.btn-6');
 const data = document.querySelector('.data');
 
 const countries = [{
-    country:'Ukraine',
+    country: 'Ukraine',
     city: ['Lviv',
         'Kyiv',
-        'Kharkiv']
+        'Kharkiv',
+        'Odesa',
+        'Ternopil']
 },
     {
-        country:'Poland',
-        city:['Krakow',
+        country: 'Poland',
+        city: ['Krakow',
             'Warsaw',
-            'Lodz']
+            'Lodz',
+            'Lublin']
+    },
+    {
+        country: 'Germany',
+        city: ['Berlin',
+            'Stuttgard',
+            'Dresden',
+            'Bremen']
+    },
+    {
+        country: 'France',
+        city: ['Paris',
+            'Toulouse',
+            'Lyon',
+            'Nantes']
+    },
+    {
+        country: 'Italy',
+        city: ['Roma',
+            'Torino',
+            'Milano',
+            'Bologna']
     }];
 
+countries.sort(((a, b) => {
+    if (a > b) {
+        return 1;
+    }
+    return -1;
+}));
 
 
-    
-
-
-countries.map((value) =>{
+countries.map((value) => {
+    value.city.sort(((a, b) => {
+        if (a > b) {
+            return 1;
+        }
+        return -1;
+    }));
     const countryOption = document.createElement('option');
-    countryOption.setAttribute('value',value.country);
+    countryOption.setAttribute('value', value.country);
     countryOption.innerText = value.country;
     country.appendChild(countryOption);
 
@@ -175,10 +208,10 @@ country.onchange = () => {
     city.innerText = '';
     let selectedCountry = country.value;
     for (const item of countries) {
-        if (selectedCountry === item.country){
+        if (selectedCountry === item.country) {
             item.city.forEach((item) => {
                 let cityOption = document.createElement('option');
-                cityOption.setAttribute('value',item);
+                cityOption.setAttribute('value', item);
                 cityOption.innerText = item;
                 city.appendChild(cityOption);
             });
@@ -188,9 +221,9 @@ country.onchange = () => {
 
 
 ok.onclick = () => {
-    firstName.value === ''|| lastName.value === '' || city.value ==='' || country.value === '' || country.value === 'Select the country' ?
-        data.innerText = 'Incorrect name':
-    data.innerHTML = `Hello my name is ${firstName.value.trim()}. My surname is ${lastName.value.trim()}. 
+    firstName.value === '' || lastName.value === '' || city.value === '' || country.value === '' || country.value === 'Select the country' ?
+        data.innerText = 'Incorrect name' :
+        data.innerHTML = `Hello my name is ${firstName.value.trim()}. My surname is ${lastName.value.trim()}. 
     I'm from ${city.value},${country.value}`;
 };
 
@@ -199,6 +232,36 @@ ok.onclick = () => {
 //     Перший аргумент визначає кількість строк.
 //     Другий параметр визначає кількість ячейок в кожній строці.
 //     Третій параметр визначає елемент в який потрібно таблицю додати.
+
+const line = document.getElementById('line');
+const element = document.getElementById('items');
+const tagName = document.getElementById('tag-elem');
+const createTable = document.querySelector('.btn-7');
+const newTable = document.querySelector('.new-table');
+
+
+
+const creatorTables = function (tag, line, elem) {
+    const createdTag = document.createElement(tag.value);
+    newTable.appendChild(createdTag);
+    for (let i = 0; i < line.value; i++) {
+        const lineTr = document.createElement('tr');
+        createdTag.appendChild(lineTr);
+        for (let j = 0; j < elem.value; j++) {
+            const elemTd = document.createElement('td');
+            lineTr.appendChild(elemTd)
+        }
+    }
+};
+
+
+
+
+createTable.onclick = () => {
+  creatorTables(tagName,line,element);
+};
+
+
 // - Напишіть «Карусель» – стрічку зображень, яку можна гортати вліво-вправо нажаттям на стрілочки.
 
 
