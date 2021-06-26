@@ -240,7 +240,6 @@ const createTable = document.querySelector('.btn-7');
 const newTable = document.querySelector('.new-table');
 
 
-
 const creatorTables = function (tag, line, elem) {
     const createdTag = document.createElement(tag.value);
     newTable.appendChild(createdTag);
@@ -249,20 +248,62 @@ const creatorTables = function (tag, line, elem) {
         createdTag.appendChild(lineTr);
         for (let j = 0; j < elem.value; j++) {
             const elemTd = document.createElement('td');
-            lineTr.appendChild(elemTd)
+            lineTr.appendChild(elemTd);
+            elemTd.innerText = 'hi';
         }
     }
 };
 
 
-
-
 createTable.onclick = () => {
-  creatorTables(tagName,line,element);
+    creatorTables(tagName, line, element);
 };
 
 
 // - Напишіть «Карусель» – стрічку зображень, яку можна гортати вліво-вправо нажаттям на стрілочки.
+
+const arrowLeft = document.querySelector('.arrow-left');
+const arrowRight = document.querySelector('.arrow-right');
+const pictures = document.querySelectorAll('.item');
+
+
+console.log(pictures);
+console.log(pictures.length);
+
+
+let counter = 0;
+arrowRight.onclick = () => {
+    if (counter < pictures.length - 1) {
+        pictures[counter].hidden = true;
+        counter++;
+    }
+};
+
+arrowLeft.onclick = () => {
+    if (counter-1 < pictures.length) {
+        pictures[counter-1].hidden = false;
+        counter--;
+    }
+};
+
+// function carousel(pic, right, left, counter = 0) {
+//     right.onclick = () => {
+//         if (counter < pic.length-1) {
+//             pic[counter].hidden = true;
+//             counter++;
+//         } else {
+//             carousel(pic, right, left, counter = 0)
+//             pic[counter].hidden = false;
+//         }
+//     };
+// }
+
+// carousel(pictures, arrowRight, arrowLeft);
+
+
+
+
+
 
 
 

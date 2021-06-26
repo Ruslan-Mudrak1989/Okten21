@@ -50,3 +50,42 @@ legend {
     padding: 20px;
 }
 
+table, th, td {
+    background-color: gray;
+    color: #eeeeee;
+}
+.new-table {
+    margin: 15px;
+
+}
+
+#myCarousel {
+    margin: 0 auto;
+    width: 50%
+}
+
+.carousel-inner {
+    display: flex;
+
+}
+.control {
+    display: flex;
+    justify-content: space-between;
+}
+.arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+
+    border-left: 30px solid saddlebrown;
+}
+
+.arrow-left {
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+
+    border-right:30px solid saddlebrown;
+}
