@@ -267,38 +267,34 @@ const arrowRight = document.querySelector('.arrow-right');
 const pictures = document.querySelectorAll('.item');
 
 
+
 console.log(pictures);
 console.log(pictures.length);
 
+let count = 0;
+for (let i = 0; i < pictures.length; i++) {
+    arrowRight.onclick = () => {
+        pictures[count].hidden = true;
+        count++;
+    };
+}
 
-let counter = 0;
-arrowRight.onclick = () => {
-    if (counter < pictures.length - 1) {
-        pictures[counter].hidden = true;
-        counter++;
-    }
-};
 
-arrowLeft.onclick = () => {
-    if (counter-1 < pictures.length) {
-        pictures[counter-1].hidden = false;
-        counter--;
-    }
-};
+let count1 = pictures.length-1;
+for (let i = 0; i < pictures.length ; i++) {
+    arrowLeft.onclick = () => {
+        console.log(pictures[count1]);
+        pictures[count1].hidden = false;
+        count1--;
+    };
+}
 
-// function carousel(pic, right, left, counter = 0) {
-//     right.onclick = () => {
-//         if (counter < pic.length-1) {
-//             pic[counter].hidden = true;
-//             counter++;
-//         } else {
-//             carousel(pic, right, left, counter = 0)
-//             pic[counter].hidden = false;
-//         }
-//     };
-// }
+// Як зробити щоб карусель йшла по колу???
 
-// carousel(pictures, arrowRight, arrowLeft);
+
+
+
+
 
 
 
