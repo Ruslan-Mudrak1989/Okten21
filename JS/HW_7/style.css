@@ -1,15 +1,13 @@
 #wrapped {
     margin: 10px;
 }
+
 .sct-task {
     background-color: limegreen;
     padding: 5px;
-    border:  1px solid saddlebrown;
+    border: 1px solid saddlebrown;
 }
 
-.dropdown{
-
-}
 
 .dropdown-content {
     display: flex;
@@ -28,15 +26,18 @@
     background-color: yellowgreen;
     padding: 10px;
 }
-.user-title, .user-comment{
-    border:  saddlebrown solid 1px;
+
+.user-title, .user-comment {
+    border: saddlebrown solid 1px;
     background-color: whitesmoke;
     padding: 5px;
 }
+
 .forms {
     display: flex;
     justify-content: space-around;
 }
+
 fieldset {
     background-color: #eeeeee;
 }
@@ -46,7 +47,7 @@ legend {
     color: white;
 }
 
-#user-data, #location{
+#user-data, #location {
     padding: 20px;
 }
 
@@ -54,6 +55,7 @@ table, th, td {
     background-color: gray;
     color: #eeeeee;
 }
+
 .new-table {
     margin: 15px;
 
@@ -68,10 +70,12 @@ table, th, td {
     display: flex;
 
 }
+
 .control {
     display: flex;
     justify-content: space-between;
 }
+
 .arrow-right {
     width: 0;
     height: 0;
@@ -87,18 +91,9 @@ table, th, td {
     border-top: 30px solid transparent;
     border-bottom: 30px solid transparent;
 
-    border-right:30px solid saddlebrown;
+    border-right: 30px solid saddlebrown;
 }
 
-/*.item {*/
-/*    visibility: hidden;*/
+#filter {
+    margin: 10px;
 }
-
-/*.hide {*/
-/*    visibility: hidden;*/
-/*}*/
-
-/*.active {*/
-/*    visibility: visible*/
-/*}*/
-

@@ -264,32 +264,61 @@ createTable.onclick = () => {
 
 const arrowLeft = document.querySelector('.arrow-left');
 const arrowRight = document.querySelector('.arrow-right');
-const pictures = document.querySelectorAll('.item');
+const picture = document.querySelector('.item');
 
 
+// console.log(pictures);
+// console.log(pictures.length);
 
-console.log(pictures);
-console.log(pictures.length);
+const images = [
+    {
+        image: 'lake',
+        url: 'pic/lake.jpg'
+    },
+    {
+        image: 'mountain',
+        url: 'pic/mountain.jpg'
+    },
+    {
+        image: 'sea_life',
+        url: 'pic/sea_life.jpg'
+    },
+    {
+        image: 'island',
+        url: 'pic/island.jpg'
+    }
+];
 
-let count = 0;
-for (let i = 0; i < pictures.length; i++) {
-    arrowRight.onclick = () => {
-        pictures[count].hidden = true;
-        count++;
+
+let inx = 0;
+picture.src = `${images[inx].url}`;
+arrowRight.onclick = () => {
+    if (inx < images.length - 1) {
+        inx++;
+        picture.src = `${images[inx].url}`;
+    } else {
+        inx = 0;
+        picture.src = `${images[inx].url}`;
+    }
+};
+
+
+arrowLeft.onclick = () =>{
+        if (inx) {
+            inx--;
+            picture.src = `${images[inx].url}`;
+        } else {
+
+            inx = images.length - 1;
+            picture.src = `${images[inx].url}`;
+        }
     };
-}
 
 
-let count1 = pictures.length-1;
-for (let i = 0; i < pictures.length ; i++) {
-    arrowLeft.onclick = () => {
-        console.log(pictures[count1]);
-        pictures[count1].hidden = false;
-        count1--;
-    };
-}
+// Alternative option
 
-// Як зробити щоб карусель йшла по колу???
+
+
 
 
 
