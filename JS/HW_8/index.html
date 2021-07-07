@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework8</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrapper">
+    <h3>Task-1</h3>
+<section class="task">
+        <p>Дана textarea.
+           В неё вводится текст.
+           делайте так, чтобы после захода на эту страницу через некоторое время, введенный текст остался в textarea.</p>
+        <form action="" class="some-text" name="some-text">
+            <label for="user-info">Enter some info here</label>
+            <textarea name="user-info" id="user-info" cols="30" rows="10"></textarea>
+        </form>
+</section>
+    <h3>Task-2</h3>
+    <section class="task">
+        <p>Дана форма с инпутами, текстареа, чекбоксами, радио кнопочками, селектами и тп.
+            Пользователь вводит какие-то данные и закрывает страницу (не факт, что он заполнил всю форму).
+            Сделайте так, чтобы при следующем заходе на страницу введенные им ранее данные стояли на своих местах.
+            Сделайте ваш скрипт как можно более универсальным.</p>
+        <form action="" id="user-application" name="user-application">
+            <fieldset form="user-application">
+                <legend>Application</legend>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age">
+                <div class="radiobutton">
+                    <label for="married">Married</label>
+                    <input type="radio" id="married" name="status" value="married">
+                    <label for="single">Single</label>
+                    <input type="radio" id="single" name="status" value="single">
+                </div>
+                    <label for="country">Country</label>
+                        <select name="country" id="country">
+                            <option disabled selected>Select the country</option>
+                        </select>
+                        <label for="city"><b>City</b></label>
+                        <select name="city" id="city">
+                            <option disabled selected>Select the city</option>
+                        </select>
+                <div class="user-exp">
+                    <input type="checkbox" id="html-css" name="exp" value="html-css">
+                    <label for="html-css"><b>HTML/CSS</b></label>
+                    <input type="checkbox" id="js" name="exp" value="js">
+                    <label for="js"><b>JS</b></label>
+                    <input type="checkbox" id="react" name="exp" value="react">
+                    <label for="react"><b>React</b></label>
+                    <input type="checkbox" id="angular" name="exp" value="angular">
+                    <label for="angular"><b>Angular</b></label>
+                    <input type="checkbox" id="node-js" name="exp" value="node-js">
+                    <label for="node-js"><b>Node.js</b></label>
+                </div>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+                <label for="info">Add some information about you</label>
+                <textarea name="info" id="info" cols="30" rows="10"></textarea>
+                <input type="submit" value="Send" id="submit">
+            </fieldset>
+        </form>
+    </section>
+</div>
+
+
+<script src="main.js"></script>
+</body>
+</html>

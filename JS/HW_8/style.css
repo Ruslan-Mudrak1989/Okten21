@@ -1,0 +1,31 @@
+textarea {
+    padding: 10px;
+    max-width: 100%;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1.5px 1.5px 1.5px #999;
+}
+label {
+    display: block;
+    font-weight: bold;
+    margin: 3px;
+}
+
+.task {
+    background-color: bisque;
+    margin-bottom: 5px;
+    border: 1px solid rosybrown;
+    padding: 5px;
+}
+
+.radiobutton {
+    display: flex;
+}
+
+.user-exp {
+    display: flex;
+}
+#submit {
+    display: block;
+}
