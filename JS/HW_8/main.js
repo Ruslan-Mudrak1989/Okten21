@@ -109,7 +109,8 @@ countrySelector.onchange = () => {
     }
 };
 
-const users = [];
+
+
 let counter = 1;
 const addUser = (ev) => {
     ev.preventDefault();
@@ -141,25 +142,111 @@ const addUser = (ev) => {
 
     let user = new User(`${counter}`, userFullName.value, userAge.value, countrySelector.value, citySelector.value, userPass.value, userInformation.value);
     counter++;
-    users.push(user);
     document.forms[1].reset();
-    console.log(users);
+
 
 //Local storage info
-    localStorage.setItem('logIn', JSON.stringify(users));
+
+
+    let logInfo = JSON.parse(localStorage.getItem('logIn'));
+
+    if (localStorage.getItem('logIn') === null) {
+        let users = [];
+        users.push(user);
+        localStorage.setItem('logIn', JSON.stringify(users));
+    } else {
+
+        logInfo.push(user);
+        localStorage.setItem('logIn', JSON.stringify(logInfo));
+    }
+
 };
 
-console.log(users);
 
 btnSubmit.addEventListener('click', addUser);
 
-const getUser = localStorage.getItem('logIn');
-console.log(getUser);
 
 
-
-
+// let lastUser = logInfo.length-1;
 // const {id, name, age, status, country, city, exp, password, info} = lastUser;
+//
+// userFullName.value = name;
+// userAge.value = +age;
+// for (const radio of userStatus) {
+//     if (radio.value === status) {
+//         radio.checked = true;
+//     }
+// }
+// for (const item of countrySelector) {
+//     if (item.value === country) {
+//         item.selected = true;
+//     }
+// }
+// citySelector.innerText = '';
+// let selectedCountry = countrySelector.value;
+// for (const item of countries) {
+//     if (selectedCountry === item.country) {
+//         for (const field of item.city) {
+//             const cityOption = document.createElement('option');
+//             cityOption.setAttribute('value', field);
+//             cityOption.innerText = field;
+//             citySelector.appendChild(cityOption);
+//             if (field === city) {
+//                 cityOption.selected = true;
+//             }
+//         }
+//     }
+// }
+// for (const item of userExp) {
+//     exp.forEach((e => {
+//         if (item.value === e) {
+//             item.checked = true;
+//         }
+//     }))
+// }
+//
+// userPass.value = password;
+// userInformation.value = info;
+// let lastUser = logInfo.length-1;
+// const {id, name, age, status, country, city, exp, password, info} = lastUser;
+//
+// userFullName.value = name;
+// userAge.value = +age;
+// for (const radio of userStatus) {
+//     if (radio.value === status) {
+//         radio.checked = true;
+//     }
+// }
+// for (const item of countrySelector) {
+//     if (item.value === country) {
+//         item.selected = true;
+//     }
+// }
+// citySelector.innerText = '';
+// let selectedCountry = countrySelector.value;
+// for (const item of countries) {
+//     if (selectedCountry === item.country) {
+//         for (const field of item.city) {
+//             const cityOption = document.createElement('option');
+//             cityOption.setAttribute('value', field);
+//             cityOption.innerText = field;
+//             citySelector.appendChild(cityOption);
+//             if (field === city) {
+//                 cityOption.selected = true;
+//             }
+//         }
+//     }
+// }
+// for (const item of userExp) {
+//     exp.forEach((e => {
+//         if (item.value === e) {
+//             item.checked = true;
+//         }
+//     }))
+// }
+//
+// userPass.value = password;
+// userInformation.value = info;
 
 
 // userAge.value = +age;
@@ -202,15 +289,10 @@ console.log(getUser);
 // localStorage.clear();
 
 
-// -Дан текстареа. В него можно ввести данные, нажать кнопку "сохранить" и они "фикисруются" (в хранилище), затем поредактировать их, затем еще поредактировать и возможно еще.....
-// Требование : хранить историю своих изменений (даже после перезагрузки страницы).
-// Сверху над текстареа должны появится стрелочки, с помощью которых можно перемещаться по истории (не забудьте!чекпоинт истории - нажатеи кнопки сохранить).
 
 
 
 
-// - Реализуйте записную книгу, хранящую данные в локальном хранилище.
-//     Данные которые надо сохранять : ФИО, номер, почта, фирма, отдел, день рождения
-// Данные вводить через соответсвующую форму.
-// --Каждому контакту добавить кнопку для удаления контакта.
-// --Каждому контакту добавить кнопку редактироваиня. При нажати на нее появляется форма, в которой есть все необходимые инпуты для редактирования, которые уже заполнены данными объекта
+
+
+

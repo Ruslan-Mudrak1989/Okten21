@@ -8,7 +8,6 @@ btn.onclick = () => {
     text.hidden === true ?
         text.hidden = false :
         text.hidden = true;
-
 };
 
 
