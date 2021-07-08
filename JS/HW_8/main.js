@@ -155,7 +155,6 @@ const addUser = (ev) => {
         users.push(user);
         localStorage.setItem('logIn', JSON.stringify(users));
     } else {
-
         logInfo.push(user);
         localStorage.setItem('logIn', JSON.stringify(logInfo));
     }
@@ -166,127 +165,60 @@ const addUser = (ev) => {
 btnSubmit.addEventListener('click', addUser);
 
 
+let item1 = JSON.parse(localStorage.getItem('logIn'));
+console.log(item1);
 
-// let lastUser = logInfo.length-1;
-// const {id, name, age, status, country, city, exp, password, info} = lastUser;
-//
-// userFullName.value = name;
-// userAge.value = +age;
-// for (const radio of userStatus) {
-//     if (radio.value === status) {
-//         radio.checked = true;
-//     }
-// }
-// for (const item of countrySelector) {
-//     if (item.value === country) {
-//         item.selected = true;
-//     }
-// }
-// citySelector.innerText = '';
-// let selectedCountry = countrySelector.value;
-// for (const item of countries) {
-//     if (selectedCountry === item.country) {
-//         for (const field of item.city) {
-//             const cityOption = document.createElement('option');
-//             cityOption.setAttribute('value', field);
-//             cityOption.innerText = field;
-//             citySelector.appendChild(cityOption);
-//             if (field === city) {
-//                 cityOption.selected = true;
-//             }
-//         }
-//     }
-// }
-// for (const item of userExp) {
-//     exp.forEach((e => {
-//         if (item.value === e) {
-//             item.checked = true;
-//         }
-//     }))
-// }
-//
-// userPass.value = password;
-// userInformation.value = info;
-// let lastUser = logInfo.length-1;
-// const {id, name, age, status, country, city, exp, password, info} = lastUser;
-//
-// userFullName.value = name;
-// userAge.value = +age;
-// for (const radio of userStatus) {
-//     if (radio.value === status) {
-//         radio.checked = true;
-//     }
-// }
-// for (const item of countrySelector) {
-//     if (item.value === country) {
-//         item.selected = true;
-//     }
-// }
-// citySelector.innerText = '';
-// let selectedCountry = countrySelector.value;
-// for (const item of countries) {
-//     if (selectedCountry === item.country) {
-//         for (const field of item.city) {
-//             const cityOption = document.createElement('option');
-//             cityOption.setAttribute('value', field);
-//             cityOption.innerText = field;
-//             citySelector.appendChild(cityOption);
-//             if (field === city) {
-//                 cityOption.selected = true;
-//             }
-//         }
-//     }
-// }
-// for (const item of userExp) {
-//     exp.forEach((e => {
-//         if (item.value === e) {
-//             item.checked = true;
-//         }
-//     }))
-// }
-//
-// userPass.value = password;
-// userInformation.value = info;
+let lastUser = item1.pop();
+const {id, name, age, status, country, city, exp, password, info} = lastUser;
+
+userFullName.value = name;
+userAge.value = +age;
+for (const radio of userStatus) {
+    if (radio.value === status) {
+        radio.checked = true;
+    }
+}
+for (const item of countrySelector) {
+    if (item.value === country) {
+        item.selected = true;
+    }
+}
+citySelector.innerText = '';
+let selectedCountry = countrySelector.value;
+for (const item of countries) {
+    if (selectedCountry === item.country) {
+        for (const field of item.city) {
+            const cityOption = document.createElement('option');
+            cityOption.setAttribute('value', field);
+            cityOption.innerText = field;
+            citySelector.appendChild(cityOption);
+            if (field === city) {
+                cityOption.selected = true;
+            }
+        }
+    }
+}
+for (const item of userExp) {
+    exp.forEach((skill => {
+        if (item.value === skill) {
+            item.checked = true;
+        }
+    }))
+}
+
+userPass.value = password;
+userInformation.value = info;
 
 
-// userAge.value = +age;
-// for (const radio of userStatus) {
-//     if (radio.value === status) {
-//         radio.checked = true;
-//     }
-// }
-// for (const item of countrySelector) {
-//     if (item.value === country) {
-//         item.selected = true;
-//     }
-// }
-//     citySelector.innerText = '';
-//     let selectedCountry = countrySelector.value;
-//     for (const item of countries) {
-//         if (selectedCountry === item.country) {
-//             for (const field of item.city) {
-//                 const cityOption = document.createElement('option');
-//                 cityOption.setAttribute('value', field);
-//                 cityOption.innerText = field;
-//                 citySelector.appendChild(cityOption);
-//                 if (field === city) {
-//                     cityOption.selected = true;
-//                 }
-//             }
-//         }
-//     }
-// for (const item of userExp) {
-//     exp.forEach((e => {
-//         if (item.value === e) {
-//             item.checked = true;
-//         }
-//     }))
-// }
 
-// userPass.value = password;
-// userInformation.value = info;
 
-// localStorage.clear();
+
+
+
+
+
+
+
 
 
 
